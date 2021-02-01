@@ -9,11 +9,11 @@ We encourage you to use either IntelliJ IDE or maven from command line in order 
 
 ## Existing Classes ##
 
-1. <strong>HelloWorld</strong> interface and class which will hold the functions of our web service.
+1. **HelloWorld** interface and class which will hold the functions of our web service.
 
-2. <strong>ServicePublisher</strong> class that publishes the generated WSDL file on an http server.
+2. **ServicePublisher** class that publishes the generated WSDL file on an http server.
 
-3. <strong>Client</strong> class which we can use to test without SoapUI.
+3. **Client** class which we can use to test without SoapUI.
 
 ## IntelliJ Instructions ##
 
