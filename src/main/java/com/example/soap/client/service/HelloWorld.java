@@ -28,6 +28,21 @@ public interface HelloWorld {
      * 
      * @param arg0
      * @return
+     *     returns com.example.soap.client.service.StudentData
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "getStudent", targetNamespace = "http://service.soap.example.com/", className = "com.example.soap.client.service.GetStudent")
+    @ResponseWrapper(localName = "getStudentResponse", targetNamespace = "http://service.soap.example.com/", className = "com.example.soap.client.service.GetStudentResponse")
+    @Action(input = "http://service.soap.example.com/HelloWorld/getStudentRequest", output = "http://service.soap.example.com/HelloWorld/getStudentResponse")
+    public StudentData getStudent(
+        @WebParam(name = "arg0", targetNamespace = "")
+        String arg0);
+
+    /**
+     * 
+     * @param arg0
+     * @return
      *     returns java.lang.String
      */
     @WebMethod

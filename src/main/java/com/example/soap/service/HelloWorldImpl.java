@@ -1,4 +1,7 @@
 package com.example.soap.service;
+
+import com.example.soap.utils.StudentData;
+
 import javax.jws.WebService;
 
 /**
@@ -15,5 +18,12 @@ public class HelloWorldImpl implements HelloWorld {
 	@Override
 	public String sayHelloWorld(String content) {
 		return "Hello " + content + "!";
+	}
+
+	@Override
+	public StudentData getStudent(String first_name){
+		String course_name = "SOEN487";
+		String res = "Hello, I am " + first_name + " from " + course_name;
+		return new StudentData(first_name, course_name, res);
 	}
 }

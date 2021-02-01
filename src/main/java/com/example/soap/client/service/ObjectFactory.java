@@ -25,6 +25,8 @@ import javax.xml.namespace.QName;
 public class ObjectFactory {
 
     private final static QName _SayHelloWorld_QNAME = new QName("http://service.soap.example.com/", "sayHelloWorld");
+    private final static QName _GetStudent_QNAME = new QName("http://service.soap.example.com/", "getStudent");
+    private final static QName _GetStudentResponse_QNAME = new QName("http://service.soap.example.com/", "getStudentResponse");
     private final static QName _SayHelloWorldResponse_QNAME = new QName("http://service.soap.example.com/", "sayHelloWorldResponse");
 
     /**
@@ -32,6 +34,14 @@ public class ObjectFactory {
      * 
      */
     public ObjectFactory() {
+    }
+
+    /**
+     * Create an instance of {@link GetStudentResponse }
+     * 
+     */
+    public GetStudentResponse createGetStudentResponse() {
+        return new GetStudentResponse();
     }
 
     /**
@@ -51,12 +61,46 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link GetStudent }
+     * 
+     */
+    public GetStudent createGetStudent() {
+        return new GetStudent();
+    }
+
+    /**
+     * Create an instance of {@link StudentData }
+     * 
+     */
+    public StudentData createStudentData() {
+        return new StudentData();
+    }
+
+    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link SayHelloWorld }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://service.soap.example.com/", name = "sayHelloWorld")
     public JAXBElement<SayHelloWorld> createSayHelloWorld(SayHelloWorld value) {
         return new JAXBElement<SayHelloWorld>(_SayHelloWorld_QNAME, SayHelloWorld.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetStudent }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://service.soap.example.com/", name = "getStudent")
+    public JAXBElement<GetStudent> createGetStudent(GetStudent value) {
+        return new JAXBElement<GetStudent>(_GetStudent_QNAME, GetStudent.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetStudentResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://service.soap.example.com/", name = "getStudentResponse")
+    public JAXBElement<GetStudentResponse> createGetStudentResponse(GetStudentResponse value) {
+        return new JAXBElement<GetStudentResponse>(_GetStudentResponse_QNAME, GetStudentResponse.class, null, value);
     }
 
     /**
