@@ -44,3 +44,6 @@ You can now open requests from the navigator on the left, edit the message and s
 
 ![Screenshot](img/soapui2.png)
 
+## Curl Testing ##
+
+    curl -i -X POST -H "SOAPAction: \"\"" -H "Content-Type:text/xml" --data @envelope.xml http://localhost:8090/helloworld
