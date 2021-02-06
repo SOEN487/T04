@@ -5,6 +5,8 @@ You should download this repository to follow along when watching the tutorial.
 
 The finished example can be found on the finished branch of this repository.
 
+**Note:** For Lab instructions please refer to [Lab04](https://github.com/SOEN487/Lab04)
+
 We encourage you to use either IntelliJ IDE or maven from command line in order to get the best support from our TAs.
 
 ## Existing Classes ##
